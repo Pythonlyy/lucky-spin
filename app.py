@@ -39,3 +39,7 @@ def index():
                            coins=session["coins"],
                            result=session.get("result", []),
                            message=session.get("message", ""))
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

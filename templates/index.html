@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎰 Lucky Spin</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    button { padding: 10px 20px; font-size: 18px; margin: 10px; }
+    .slot { font-size: 50px; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>🎰 Lucky Spin</h1>
+  <p>You have <strong>{{ coins }}</strong> coins.</p>
+
+  {% if result %}
+    <div class="slot">{{ result[0] }} {{ result[1] }} {{ result[2] }}</div>
+  {% endif %}
+
+  <p>{{ message }}</p>
+
+  <form method="post">
+    <button name="spin" type="submit">🎲 Spin</button>
+    <button name="restart" type="submit">🔁 Restart</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: lucky-spin-demo
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        value: "your_super_secret_key_here"
